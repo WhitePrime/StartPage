@@ -1,0 +1,57 @@
+<!--
+
+	Infinise Go
+	http://go.infinise.com
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<title id="title">Поиск</title>
+		
+		<link rel="stylesheet" href="style/style.css" type="text/css">
+		<link rel="icon" href="favicon.png">
+		
+		<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+		
+		<script src="scripts/go.main.js" type="text/javascript"></script>
+		<script src="scripts/go.tools.js" type="text/javascript"></script>
+		<script src="scripts/search.index.js" type="text/javascript"></script>
+		<script src="scripts/search.form.js" type="text/javascript"></script>
+		<script src="scripts/search.suggest.js" type="text/javascript"></script>
+		
+		<script src="engines/google_en.js" type="text/javascript"></script>
+		<script src="engines/wikipedia_en.js" type="text/javascript"></script>
+		<script src="engines/youtube_en.js" type="text/javascript"></script>
+		<script src="engines/twitter_en.js" type="text/javascript"></script>
+        <script src="engines/startpack_en.js" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+			
+		<div id="engines"></div>
+
+		<div id="container">
+			
+			<form id="form" onsubmit="return doSearch()"><div id="box">
+				<div id="input"><input id="i" type="text" placeholder="…" autosave="com.infinise.go" results="5" /></div>
+				<a onclick="nextLanguage()" id="lang"></a>
+				<ul id="sugs"></ul>
+			</div></form>
+			
+			<p id="method"></p>
+			
+		</div>
+		
+		<script>
+			init();
+		</script>
+
+	</body>
+
+</html>
